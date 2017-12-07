@@ -1,0 +1,33 @@
+Task3:
+
+def sum(a:Int, b:Int, c:Int) = a + b + c
+def modifiedSum = sum(5, _:Int, _:Int)
+def modifiedSquare(callback : (Int, Int) => Int, x:Int, y:Int):Int = {
+    val z = callback(x,y)
+    z * z
+}
+val p = modifiedSquare(modifiedSum, 7, 8)
+println(p)
+
+val q = modifiedSquare(modifiedSum, 3, 4)
+println(q)
+
+Task4:
+
+def findPrice(subject: String):Int = {
+    val price:Int = subject match {
+        case "Android" => 12999
+        case "Big Data Development" => 17999
+        case "Advanced Big Data Development" => 17999
+        case "Spark" => 19999
+        case _ => -1
+     }
+     return price
+}
+
+val p = findPrice("Android")
+val p = findPrice("Big Data Development")
+val p = findPrice("Advanced Big Data Development")
+val p = findPrice("Spark")
+val p = findPrice("Java")
+
